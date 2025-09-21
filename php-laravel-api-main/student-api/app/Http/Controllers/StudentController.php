@@ -92,7 +92,7 @@ class StudentController extends Controller
     public function destroy(string $id)
     {
         try {
-            $deleted = this->studentService->deleteStudent($id);
+            $deleted = $this->studentService->deleteStudent($id);
 
             return $deleted
                 ? response()->json(['message'=> 'Student deleted'], 200)

@@ -10,7 +10,7 @@ class StudentService {
 
     public function getAllStudents( ) {
         try {
-            $students = Students::all();
+            $students = Student::all();
             Log::info("Successfully fetched all students.", ['count' => $students->count()]);
             return $students;
         } catch (Exception $e) {
